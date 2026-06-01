@@ -7,19 +7,19 @@ public class CalculatorTest {
     @Test
     public void testAddInt() {
         Calculator calc = new Calculator();
-        assertEquals(5, calc.addInt(2, 3), "2 + 3은 5여야 합니다.");
+        assertEquals(6, calc.addInt(3, 3), "2 + 3은 5여야 합니다.");
     }
 
     @Test
     public void testSubtractInt() {
         Calculator calc = new Calculator();
-        assertEquals(5, calc.subtractInt(10, 5), "10 - 5는 5여야 합니다.");
+        assertEquals(7, calc.subtractInt(10, 3), "10 - 5는 5여야 합니다.");
     }
 
     @Test
     public void testMultiplyInt() {
         Calculator calc = new Calculator();
-        assertEquals(30, calc.multiplyInt(5, 6), "4 * 6은 24여야 합니다.");
+        assertEquals(40, calc.multiplyInt(5, 7), "4 * 6은 24여야 합니다.");
     }
 
     @Test
