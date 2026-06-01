@@ -18,6 +18,7 @@ pipeline {
         stage('Prepare') {
             steps {
                 sh '''
+                cd SW
                 mkdir -p ${CLASS_DIR}
                 mkdir -p ${REPORT_DIR}
                 mkdir -p lib
@@ -30,6 +31,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                cd SW
                 echo "[+] Compiling source files..."
                 find src -name "*.java" > sources.txt
                 javac -encoding UTF-8 -d ${CLASS_DIR} -cp ${JUNIT_JAR_PATH} @sources.txt
@@ -40,6 +42,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
+                cd SW
                 echo "[+] Running tests with JUnit..."
                 java -jar ${JUNIT_JAR_PATH} \
                     --class-path ${CLASS_DIR} \
@@ -58,8 +61,8 @@ pipeline {
     post {
         always {
             echo "[*] Archiving test results..."
-            junit "${REPORT_DIR}/**/*.xml"
-            archiveArtifacts artifacts: "${REPORT_DIR}/**/*", allowEmptyArchive: true
+            junit "SW/${REPORT_DIR}/**/*.xml"
+            archiveArtifacts artifacts: "SW/${REPORT_DIR}/**/*", allowEmptyArchive: true
         }
         failure {
             echo "Build or test failed"
