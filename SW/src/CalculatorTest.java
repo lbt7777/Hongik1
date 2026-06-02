@@ -19,7 +19,7 @@ public class CalculatorTest {
     @Test
     public void testMultiplyInt() {
         Calculator calc = new Calculator();
-        assertEquals(35, calc.multiplyInt(5, 7), "4 * 6은 24여야 합니다.");
+        assertEquals(24, calc.multiplyInt(4, 6), "4 * 6은 24여야 합니다.");
     }
 
     @Test
