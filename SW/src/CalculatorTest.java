@@ -7,7 +7,7 @@ public class CalculatorTest {
     @Test
     public void testAddInt() {
         Calculator calc = new Calculator();
-        assertEquals(5, calc.addInt(2, 3), "2 + 3은 5여야 합니다.");
+        assertEquals(7, calc.addInt(3, 4), "2 + 3은 5여야 합니다.");
     }
 
     @Test
