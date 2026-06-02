@@ -26,5 +26,5 @@ public class CalculatorTest {
     public void testDivideInt() {
         Calculator calc = new Calculator();
         assertEquals(4, calc.divideInt(20, 5), "20 / 5는 4여야 합니다.");
-    }
+    } 
 }
