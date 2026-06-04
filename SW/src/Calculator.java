@@ -1,9 +1,11 @@
 public class Calculator {
-    
+   
+	
     // 덧셈
     public int addInt(int a, int b) {
         return a + b;
     }
+    
 
     // 뺄셈
     public int subtractInt(int a, int b) {
@@ -14,6 +16,8 @@ public class Calculator {
     public int multiplyInt(int a, int b) {
         return a * b;
     }
+    
+  
 
     // 나눗셈
     public int divideInt(int a, int b) {
